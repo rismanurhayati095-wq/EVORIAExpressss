@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EVORIA Express — Media Pembelajaran & Desain Edukasi</title>
+<meta name="description" content="EVORIA Express — jasa desain edukasi mahasiswa: infografis, LKPD, media pembelajaran, kuis interaktif, flashcard, soal, PPT, dan tools file.">
+<style>
+:root{
+  --pink:#ff9fcf; --pink2:#ffd1e6; --rose:#ff5fa7; --black:#0b0b0f; --ink:#17151a;
+  --muted:#77717b; --card:#151319; --line:#2d2830; --white:#fff8fc; --soft:#fff0f7;
+  --green:#65e6ad; --gold:#ffd76b; --shadow:0 20px 60px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:
+radial-gradient(circle at 15% 0%,rgba(255,159,207,.22),transparent 30%),
+radial-gradient(circle at 85% 15%,rgba(255,95,167,.13),transparent 28%),var(--black);color:var(--white)}
+a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 20px}
+.topbar{position:sticky;top:0;z-index:30;background:rgba(11,11,15,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:900;letter-spacing:.5px;font-size:21px}.brand span{color:var(--pink)}
+.navlinks{display:flex;gap:8px;flex-wrap:wrap}.navlinks a{padding:9px 12px;border-radius:999px;color:#d9d2d8;font-size:13px}.navlinks a:hover{background:#242027;color:#fff}
+.btn{border:0;cursor:pointer;border-radius:14px;padding:12px 16px;font-weight:800;transition:.2s;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn:hover{transform:translateY(-2px)}.btn-pink{background:linear-gradient(135deg,var(--pink),var(--rose));color:#1b0b13;box-shadow:0 10px 28px rgba(255,95,167,.2)}
+.btn-dark{background:#211d24;color:#fff;border:1px solid #38313b}.btn-green{background:var(--green);color:#082015}
+.hero{padding:70px 0 35px}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+.kicker{display:inline-flex;padding:8px 12px;border:1px solid #49333f;border-radius:999px;background:#1b141a;color:#ffc9e1;font-size:12px;font-weight:800}
+h1{font-size:clamp(42px,7vw,78px);line-height:.94;margin:18px 0;letter-spacing:-4px}
+.grad{background:linear-gradient(90deg,#fff,#ffb9da,#ff6cab);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:#c6bec6;line-height:1.7;font-size:17px;max-width:680px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.hero-card{background:linear-gradient(145deg,#211a22,#100e12);border:1px solid #3b3039;border-radius:28px;padding:20px;box-shadow:var(--shadow);transform:rotate(1deg)}
+.hero-art{height:390px;border-radius:22px;position:relative;overflow:hidden;background:
+linear-gradient(135deg,#ffb9da 0 20%,#2b1625 20% 58%,#0e0d11 58%);padding:24px}
+.paper{position:absolute;background:#fff8fb;color:#1c1620;border-radius:12px;box-shadow:0 18px 40px #0008;transform:rotate(-5deg);padding:20px;width:72%;height:70%;left:12%;top:14%}
+.paper h3{margin:0;font-size:28px}.paper .line{height:8px;background:#ffacd2;border-radius:9px;margin:12px 0}.paper .mini{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.paper .box{height:55px;border-radius:9px;background:#f1dbe7}.floating{position:absolute;background:#171319;color:#ffd2e5;border:1px solid #4c3743;padding:9px 12px;border-radius:12px;font-weight:800;font-size:12px}.f1{right:15px;top:25px}.f2{left:15px;bottom:30px}.f3{right:28px;bottom:72px}
+section{padding:42px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:20px}.eyebrow{color:var(--pink);font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:1.6px}.section-head h2{font-size:32px;margin:5px 0}.section-head p{color:#aaa1aa;max-width:650px;margin:0;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{background:linear-gradient(145deg,#17141a,#100e12);border:1px solid #2e2930;border-radius:20px;padding:17px;box-shadow:0 12px 35px #0003}.card h3{margin:10px 0 6px;font-size:17px}.card p{color:#aaa1aa;font-size:13px;line-height:1.5;margin:0}.icon{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,#ffd0e4,#ff73b2);display:grid;place-items:center;color:#25121d;font-size:22px}
+.price{font-weight:900;color:#fff;margin-top:11px}.price small{color:#8f8790;font-weight:500}
+.table{width:100%;border-collapse:collapse;overflow:hidden;border-radius:18px;background:#151219;border:1px solid #2d2830}.table th,.table td{padding:13px 15px;border-bottom:1px solid #2b2630;text-align:left;font-size:13px}.table th{color:#ffb4d5;background:#201820}.table td{color:#ddd5dc}.table tr:last-child td{border-bottom:0}
+.template-types{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.type-card{width:100%;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:14px;text-align:left;border:1px solid #342d35;background:linear-gradient(145deg,#19151b,#100e12);color:#fff;border-radius:20px;padding:18px;cursor:pointer;transition:.2s}.type-card:hover{transform:translateY(-2px);border-color:#ff9fcf;box-shadow:0 14px 35px #0005}.type-icon{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,#ffd4e7,#ff73b2);font-size:27px;box-shadow:0 8px 20px #ff72b533}.type-card h3{margin:0 0 5px;font-size:17px}.type-card p{margin:0 0 8px;color:#aaa1aa;font-size:12px;line-height:1.45}.type-card .example-count{font-size:11px;color:#ffb9d8;font-weight:900}.type-card .see-examples{display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:7px 10px;border-radius:999px;background:#ff83bb;color:#24131d;font-size:10px;font-weight:950}.type-card>b{font-size:30px;color:#ff9fcf}.template-modal{position:fixed;inset:0;z-index:100;display:none;background:rgba(5,4,7,.82);backdrop-filter:blur(12px);padding:30px 18px}.template-modal.show{display:flex;align-items:center;justify-content:center}.template-modal-box{width:min(1080px,100%);max-height:90vh;overflow:hidden;background:#111015;border:1px solid #403541;border-radius:24px;box-shadow:0 30px 100px #0008;padding:20px}.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.modal-head h2{margin:4px 0;font-size:26px}.modal-close{width:42px;height:42px;border-radius:50%;border:1px solid #453844;background:#211b23;color:#fff;font-size:28px;cursor:pointer}.modal-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-height:calc(90vh - 110px);overflow:auto;padding-right:4px}.design{overflow:hidden;padding:0}.design-cover{height:260px;padding:17px;position:relative;overflow:hidden;border-radius:18px 18px 0 0;color:#fff}.design-cover:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 15%,rgba(255,255,255,.22),transparent 22%),linear-gradient(135deg,transparent 0 45%,rgba(0,0,0,.12) 45%);mix-blend-mode:screen}.cover-label{position:absolute;left:16px;top:15px;background:#ffffffd9;color:#1a1218;border-radius:999px;padding:6px 9px;font-size:10px;font-weight:900;z-index:3}.mock-sheet{position:absolute;left:13%;right:13%;top:18%;bottom:9%;background:#fff8fb;color:#211922;border-radius:10px;padding:13px;box-shadow:0 16px 30px #0008;transform:rotate(-1.5deg);overflow:hidden}.mock-top{display:flex;justify-content:space-between;font-size:17px;font-weight:900}.mock-top i{font-size:7px;letter-spacing:1px;color:#a8758f;font-style:normal}.mock-title{font-size:17px;font-weight:950;line-height:1.05;margin:10px 0 7px}.mock-lines{display:grid;gap:4px}.mock-lines em{height:4px;background:#efc8d9;border-radius:5px}.mock-lines em:nth-child(2){width:72%}.mock-lines em:nth-child(3){width:52%}.mock-blocks{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px}.mock-blocks span{height:44px;border-radius:6px;background:linear-gradient(135deg,#f3dce7,#e8b6cd)}.mock-blocks span:nth-child(2){background:linear-gradient(135deg,#d9e9e8,#9bc5bf)}.mock-blocks span:nth-child(3){background:linear-gradient(135deg,#f6e5bd,#e7bd72)}.mock-footer{position:absolute;bottom:8px;left:13px;right:13px;font-size:7px;color:#7f6875;font-weight:800}.design-info{padding:14px 16px}.tag{display:inline-block;padding:5px 8px;border-radius:999px;background:#281d26;color:#ffc1dc;font-size:10px;font-weight:800}.design-info h3{font-size:15px;margin:8px 0 4px}.design-info p{margin:0 0 11px;color:#9d949d;font-size:12px}.choose-template{font-size:11px;padding:9px 11px}.modal-open{overflow:hidden}
+.order-grid{display:grid;grid-template-columns:1fr .8fr;gap:18px}.panel{background:#141117;border:1px solid #302a32;border-radius:22px;padding:20px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:12px;color:#bdb4bc;font-weight:800}.field input,.field select,.field textarea{width:100%;border:1px solid #39313a;background:#0e0d11;color:#fff;border-radius:12px;padding:12px;outline:none}.field textarea{min-height:90px;resize:vertical}.checks{display:grid;grid-template-columns:1fr 1fr;gap:8px}.check{border:1px solid #39313a;background:#0f0e12;padding:10px;border-radius:12px;font-size:12px}.check input{accent-color:#ff83bb}
+.summary{position:sticky;top:90px}.sum-row{display:flex;justify-content:space-between;gap:10px;padding:9px 0;color:#cfc7ce;font-size:13px}.sum-total{border-top:1px solid #38313b;margin-top:8px;padding-top:14px;font-size:21px;font-weight:950}.discount{color:var(--green);font-weight:900}
+.locked{position:relative}.locked:after{content:"🔒 Terkunci — aktif setelah order";position:absolute;inset:0;display:grid;place-items:center;background:rgba(10,9,12,.72);backdrop-filter:blur(4px);border-radius:22px;color:#ffd0e4;font-weight:900;text-align:center;padding:20px}.unlocked:after{display:none}
+.tool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.tool-card{background:#141117;border:1px solid #312b34;border-radius:18px;padding:16px}.tool-card h3{margin:0 0 6px;font-size:15px}.tool-card p{color:#aaa1aa;font-size:12px;min-height:36px}.drop{border:1px dashed #5a4653;padding:15px;border-radius:14px;background:#100e12}.tool-card input[type=file]{width:100%;font-size:11px;color:#bdb4bc}.tool-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.status{font-size:11px;color:#8f8790;margin-top:7px}.tool-note{padding:14px;border-radius:15px;background:#211820;color:#d8cbd3;font-size:12px;line-height:1.6;margin-bottom:14px}
+footer{padding:50px 0 70px;border-top:1px solid #28232a;margin-top:40px}.footer-grid{display:flex;justify-content:space-between;gap:30px;align-items:center}.muted{color:#8e858d;font-size:12px;line-height:1.6}
+.toast{position:fixed;right:18px;bottom:18px;z-index:60;background:#fff;color:#1a1218;padding:13px 15px;border-radius:14px;box-shadow:var(--shadow);font-size:13px;font-weight:800;transform:translateY(140%);transition:.25s}.toast.show{transform:translateY(0)}
+
+.tool-result{margin-top:10px;display:flex;flex-direction:column;gap:8px}.tool-result:empty{display:none}.result-box{background:#0e0c10;border:1px solid #3c313a;border-radius:12px;padding:10px}.result-title{font-size:12px;font-weight:800;color:#ffd5e7;margin-bottom:7px}.result-meta{font-size:11px;color:#aaa1aa;margin-bottom:8px;word-break:break-word}.result-preview{max-width:100%;max-height:260px;border-radius:9px;background:#fff;display:block;margin-bottom:8px}.result-actions{display:flex;gap:7px;flex-wrap:wrap}.result-actions .btn{font-size:12px;padding:9px 12px}.result-pages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.result-page{background:#0a090c;border:1px solid #302831;border-radius:10px;padding:8px}.result-page img{width:100%;display:block;border-radius:7px;background:#fff;margin-bottom:7px}.result-page .btn{width:100%}
+@media(max-width:1000px){.hero-grid,.order-grid{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(3,1fr)}.tool-grid{grid-template-columns:repeat(2,1fr)}.summary{position:static}}
+@media(max-width:680px){.navlinks{display:none}.hero{padding-top:45px}.grid,.template-types,.tool-grid{grid-template-columns:1fr 1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.checks{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.design-cover{height:230px}.modal-gallery{grid-template-columns:1fr}h1{letter-spacing:-2px}}
+@media(max-width:460px){.grid,.template-types,.tool-grid{grid-template-columns:1fr}.modal-gallery{grid-template-columns:1fr 1fr}.hero-actions .btn{width:100%}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap nav">
+  <a class="brand" href="#home">EVORIA<span> EXPRESS</span></a>
+  <nav class="navlinks"><a href="#layanan">Layanan</a><a href="#template">Template</a><a href="#pesan">Pemesanan</a><a href="#tools">Tools</a><a href="#kontak">Kontak</a></nav>
+  <a class="btn btn-pink" href="#pesan">Pesan sekarang</a>
+</div></header>
+
+<main>
+<section id="home" class="hero"><div class="wrap hero-grid">
+  <div>
+    <span class="kicker">JASA MEDIA PEMBELAJARAN • MAHASISWA & SISWA</span>
+    <h1>Bikin tugas jadi <span class="grad">lebih rapi, cantik & siap pakai.</span></h1>
+    <p>EVORIA Express membantu membuat desain edukasi yang enak dilihat dan mudah dipahami: infografis, LKPD, media pembelajaran, kuis interaktif, flashcard, soal, dan bahan presentasi pembelajaran.</p>
+    <div class="hero-actions"><a class="btn btn-pink" href="#template">Lihat 140 contoh desain</a><a class="btn btn-dark" href="#pesan">Hitung pesanan</a></div>
+    <p style="font-size:12px;margin-top:15px;color:#9f969f">Mulai dari Rp3.000. Media pembelajaran & PPT Rp5.000–Rp50.000 sesuai tingkat kesulitan. Lebih dari 3 desain → diskon otomatis 10%.</p>
+  </div>
+  <div class="hero-card"><div class="hero-art">
+    <div class="paper"><h3>EVORIA<br>EXPRESS</h3><div class="line"></div><div class="line" style="width:70%"></div><div class="mini"><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div></div></div>
+    <span class="floating f1">Infografis</span><span class="floating f2">LKPD • Kuis</span><span class="floating f3">PPT • Media</span>
+  </div></div>
+</div></section>
+
+<section id="layanan"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">Layanan</div><h2>Semua kebutuhan tugas edukasi dalam satu tempat.</h2></div><p>Pilih layanan, lihat contoh, lalu isi pesanan. Harga di bawah adalah harga mulai dan dapat berubah sesuai tingkat kesulitan.</p></div>
+<div class="grid" id="serviceGrid"></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">Harga</div><h2>Transparan & gampang dihitung.</h2></div></div>
+<table class="table"><thead><tr><th>Layanan</th><th>Harga mulai</th><th>Catatan</th></tr></thead><tbody>
+<tr><td>Infografis</td><td>Rp3.000–Rp20.000</td><td>Tergantung jumlah halaman & kompleksitas.</td></tr>
+<tr><td>LKPD</td><td>Rp3.000–Rp20.000</td><td>Desain + susunan aktivitas sesuai brief.</td></tr>
+<tr><td>Media pembelajaran</td><td>Rp5.000–Rp50.000</td><td>Interaktif/visual disesuaikan kebutuhan.</td></tr>
+<tr><td>Kuis interaktif</td><td>Rp3.000–Rp20.000</td><td>Format kuis menyesuaikan platform/HTML.</td></tr>
+<tr><td>Flashcard</td><td>Rp3.000–Rp20.000</td><td>Jumlah kartu memengaruhi harga.</td></tr>
+<tr><td>Soal & asesmen</td><td>Rp3.000–Rp20.000</td><td>Jumlah soal & tipe soal memengaruhi harga.</td></tr>
+<tr><td>Bahan presentasi/PPT</td><td>Rp5.000–Rp50.000</td><td>Jumlah slide & kompleksitas desain.</td></tr>
+</tbody></table>
+</div></section>
+
+<section id="template"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">CONTOH DESAIN • 140 TEMPLATE</div><h2>Pilih jenis barang untuk melihat contoh jadinya.</h2></div><p>Jangan scroll mencari satu-satu. <strong>Klik kotak PPT, Infografis, LKPD, dan lainnya</strong> di bawah. Contoh akan muncul dalam jendela khusus.</p></div>
+<div class="template-types" id="templateTypes"></div>
+</div></section>
+
+<div id="templateModal" class="template-modal" aria-hidden="true">
+  <div class="template-modal-box">
+    <div class="modal-head"><div><div class="eyebrow" id="modalEyebrow">Contoh desain</div><h2 id="modalTitle">Template</h2></div><button class="modal-close" id="modalClose" aria-label="Tutup">×</button></div>
+    <div class="modal-gallery" id="modalGallery"></div>
+  </div>
+</div>
+
+
+
+<section id="pesan"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">Pemesanan</div><h2>Isi sekali, langsung jadi pesan WhatsApp.</h2></div><p>Setelah klik kirim, pesanan akan disusun otomatis. Setelah pesanan dikirim, aktifkan akses tools di bawah.</p></div>
+<div class="order-grid">
+<div class="panel">
+<form id="orderForm">
+<div class="form-grid">
+<div class="field"><label>Nama</label><input id="name" required placeholder="Nama kamu"></div>
+<div class="field"><label>No. WhatsApp</label><input id="wa" required placeholder="08xxxxxxxxxx"></div>
+<div class="field"><label>Program studi</label><select id="prodi"><option value="">Pilih prodi</option></select></div>
+<div class="field"><label>Jenis layanan</label><select id="service"><option value="">Pilih layanan</option></select></div>
+<div class="field"><label>Jumlah desain/order</label><input id="qty" type="number" min="1" value="1"></div>
+<div class="field"><label>Template</label><select id="templateSelect"><option value="">Pilih template</option></select></div>
+<div class="field full"><label>Detail tugas / materi / ukuran</label><textarea id="brief" placeholder="Contoh: materi fotosintesis, kelas XI, 1 halaman A4, warna pastel..."></textarea></div>
+<div class="field full"><label>File pendukung (bisa upload banyak file)</label>
+<input id="attachment" type="file" multiple accept="image/*,.pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.zip,.rar,.txt">
+<div id="attachmentList" class="status" style="margin-top:8px">Belum ada file dipilih.</div>
+<div class="tool-actions" style="margin-top:8px"><button class="btn btn-dark" type="button" id="shareAttachments" disabled>📎 Kirim file ke WhatsApp</button></div>
+<div class="muted" style="margin-top:7px">File dipilih di perangkatmu. Setelah order, tombol ini dapat membagikan file ke WhatsApp jika browser/perangkat mendukung fitur berbagi file.</div></div>
+</div>
+<div style="margin-top:14px;display:flex;gap:9px;flex-wrap:wrap"><button class="btn btn-pink" type="submit">💬 Buat & kirim pesanan</button><button class="btn btn-dark" type="button" id="copyOrder">Salin ringkasan</button></div>
+<p class="muted" style="margin-top:10px">Catatan: harga pada kalkulator adalah estimasi awal. Harga final dapat disesuaikan setelah brief diperiksa.</p>
+</form>
+</div>
+<div class="panel summary">
+<div class="eyebrow">Ringkasan</div><h3 style="margin:5px 0 15px">Estimasi pesanan</h3>
+<div class="sum-row"><span>Harga dasar</span><b id="base">Rp0</b></div>
+<div class="sum-row"><span>Jumlah</span><b id="qtyView">1</b></div>
+<div class="sum-row"><span>Diskon</span><b class="discount" id="disc">Rp0</b></div>
+<div class="sum-row sum-total"><span>Total estimasi</span><span id="total">Rp0</span></div>
+<div class="tool-note">🎁 <b>Diskon otomatis:</b> jika jumlah desain lebih dari 3, kalkulator langsung memberi potongan 10%.</div>
+<div style="display:grid;gap:8px"><a class="btn btn-green" href="https://wa.me/6285855631853?text=Halo%20EVORIA%20Express%2C%20saya%20ingin%20memesan." target="_blank">WhatsApp EVORIA</a><a class="btn btn-dark" href="https://www.instagram.com/evoria.express?stkn=MWMzY3BwZWFkaWV1Nw==" target="_blank">Instagram @evoria.express</a></div>
+</div>
+</div>
+</div></section>
+
+<section id="tools"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">Tools file</div><h2>Fitur digital tambahan.</h2></div><p>Fitur terlihat sejak awal, tetapi hanya bisa dipakai setelah kamu mengirim pesanan melalui formulir di atas.</p></div>
+<div id="toolsLocked" class="locked"><div class="tool-grid">
+  <div class="tool-card"><h3>🖼️ PNG/JPG → PDF</h3><p>Gabungkan gambar menjadi PDF.</p><div class="drop"><input id="imgPdfInput" type="file" accept="image/png,image/jpeg" multiple><div class="tool-actions"><button class="btn btn-pink" onclick="imgToPdf()">Konversi PDF</button></div><div id="imgPdfStatus" class="status"></div><div id="imgPdfStatusResult" class="tool-result"></div></div></div>
+  <div class="tool-card"><h3>📄 PNG/JPG → Word</h3><p>Masukkan gambar ke dokumen DOCX.</p><div class="drop"><input id="imgDocxInput" type="file" accept="image/png,image/jpeg" multiple><div class="tool-actions"><button class="btn btn-pink" onclick="imgToDocx()">Buat Word</button></div><div id="imgDocxStatus" class="status"></div><div id="imgDocxStatusResult" class="tool-result"></div></div></div>
+  <div class="tool-card"><h3>📕 PDF → Word</h3><p>Ekstrak teks PDF menjadi DOCX.</p><div class="drop"><input id="pdfDocxInput" type="file" accept="application/pdf"><div class="tool-actions"><button class="btn btn-pink" onclick="pdfToDocx()">PDF → Word</button></div><div id="pdfDocxStatus" class="status"></div><div id="pdfDocxStatusResult" class="tool-result"></div></div></div>
+  <div class="tool-card"><h3>🖼️ PDF → PNG</h3><p>Render setiap halaman PDF sebagai PNG.</p><div class="drop"><input id="pdfPngInput" type="file" accept="application/pdf"><div class="tool-actions"><button class="btn btn-pink" onclick="pdfToPng()">PDF → PNG</button></div><div id="pdfPngStatus" class="status"></div><div id="pdfPngStatusResult" class="tool-result"></div></div></div>
+  <div class="tool-card"><h3>📝 Word → PDF</h3><p>Konversi DOCX melalui render halaman di browser.</p><div class="drop"><input id="wordPdfInput" type="file" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"><div class="tool-actions"><button class="btn btn-pink" onclick="wordToPdf()">Word → PDF</button></div><div id="wordPdfStatus" class="status"></div><div id="wordPdfStatusResult" class="tool-result"></div></div></div>
+  <div class="tool-card"><h3>🖼️ Word → PNG</h3><p>Render isi DOCX menjadi gambar PNG.</p><div class="drop"><input id="wordPngInput" type="file" accept=".docx"><div class="tool-actions"><button class="btn btn-pink" onclick="wordToPng()">Word → PNG</button></div><div id="wordPngStatus" class="status"></div><div id="wordPngStatusResult" class="tool-result"></div></div></div>
+  <div class="tool-card"><h3>🗜️ Compress file</h3><p>Kompres gambar, PDF, atau file umum dengan pengaturan browser.</p><div class="drop"><input id="compressFileInput" type="file"><div class="tool-actions"><button class="btn btn-pink" onclick="compressFile()">Kompres</button></div><div id="compressStatus" class="status"></div><div id="compressStatusResult" class="tool-result"></div></div></div>
+  <div class="tool-card"><h3>📷 Compress foto</h3><p>Turunkan ukuran foto sambil mempertahankan kualitas.</p><div class="drop"><input id="compressPhotoInput" type="file" accept="image/*"><div class="tool-actions"><button class="btn btn-pink" onclick="compressPhoto()">Kompres foto</button></div><div id="compressPhotoStatus" class="status"></div><div id="compressPhotoStatusResult" class="tool-result"></div></div></div>
+  <div class="tool-card"><h3>🎬 Compress video</h3><p>Re-encode video di browser menggunakan MediaRecorder.</p><div class="drop"><input id="compressVideoInput" type="file" accept="video/*"><div class="tool-actions"><button class="btn btn-pink" onclick="compressVideo()">Kompres video</button></div><div id="compressVideoStatus" class="status"></div><div id="compressVideoStatusResult" class="tool-result"></div></div></div>
+</div></div>
+<div id="unlockBox" style="margin-top:14px;padding:16px;border:1px solid #3b3039;border-radius:18px;background:#151219">
+  <b id="unlockText">🔒 Tools terkunci. Kirim pesanan terlebih dahulu.</b>
+  <span class="muted" id="unlockBtn" style="margin-left:8px">Akses akan terbuka otomatis setelah pesanan dikirim.</span>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">Cara kerja</div><h2>3 langkah sederhana.</h2></div></div>
+<div class="grid"><div class="card"><div class="icon">01</div><h3>Pilih</h3><p>Pilih layanan dan template yang paling cocok.</p></div><div class="card"><div class="icon">02</div><h3>Brief</h3><p>Kirim materi, ukuran, deadline, dan kebutuhanmu.</p></div><div class="card"><div class="icon">03</div><h3>Proses</h3><p>EVORIA menyesuaikan desain lalu mengirim hasil sesuai kesepakatan.</p></div><div class="card"><div class="icon">★</div><h3>Bonus</h3><p>Lebih dari 3 desain mendapatkan diskon otomatis 10%.</p></div></div>
+</div></section>
+</main>
+
+<footer id="kontak"><div class="wrap footer-grid">
+<div><div class="brand">EVORIA<span> EXPRESS</span></div><div class="muted">Jasa desain & media pembelajaran untuk mahasiswa/siswa.</div></div>
+<div style="text-align:right"><div class="muted">WhatsApp: <a href="https://wa.me/6285855631853" target="_blank" style="color:#ffb8d8">0858-5563-1853</a></div><div class="muted">Instagram: <a href="https://www.instagram.com/evoria.express?stkn=MWMzY3BwZWFkaWV1Nw==" target="_blank" style="color:#ffb8d8">@evoria.express</a></div></div>
+</div></footer>
+
+<div id="toast" class="toast"></div>
+
+<!-- Libraries used by the optional tools. Internet is required for these conversion libraries. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.8.0/mammoth.browser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+const services=[
+ {n:"Infografis",p:15000,i:"📊",d:"Informasi kompleks dibuat ringkas, rapi, dan visual."},
+ {n:"LKPD",p:12000,i:"📚",d:"Lembar kerja peserta didik yang terstruktur dan menarik."},
+ {n:"Media Pembelajaran",p:30000,i:"🎓",d:"Media visual/interaktif untuk membantu menjelaskan konsep."},
+ {n:"Kuis Interaktif",p:20000,i:"🧩",d:"Kuis dengan tombol, skor, dan alur yang mudah dipakai."},
+ {n:"Flashcard",p:10000,i:"🃏",d:"Kartu belajar untuk konsep, istilah, atau hafalan."},
+ {n:"Soal & Asesmen",p:10000,i:"📝",d:"Paket soal latihan, evaluasi, pilihan ganda, dan lainnya."},
+ {n:"Bahan Presentasi / PPT",p:30000,i:"🖥️",d:"Slide pembelajaran dengan hierarki informasi yang jelas."}
+];
+const programs=[
+"Ilmu Hukum","Manajemen","Akuntansi","Ekonomi Pembangunan","Agroteknologi","Agribisnis",
+"Teknologi Industri Pertanian","Ilmu Kelautan","Manajemen Sumberdaya Perairan","Teknik Informatika",
+"Teknik Industri","Teknik Elektro","Teknik Mesin","Teknik Mekatronika","Sistem Informasi",
+"Sastra Inggris","Sosiologi","Ilmu Komunikasi","Psikologi","Pendidikan Guru Sekolah Dasar",
+"Pendidikan Guru Pendidikan Anak Usia Dini","Pendidikan Bahasa dan Sastra Indonesia","Pendidikan Ilmu Pengetahuan Alam",
+"Pendidikan Informatika","Hukum Bisnis Syariah","Ekonomi Syariah","D3 Akuntansi Sektor Publik","D3 Entrepreneurship"
+];
+const designSets={
+ "Infografis":[
+  ["Etika Hukum di Era Digital","⚖️"],["Pertumbuhan Ekonomi Madura","📈"],["Sistem Rantai Pasok UMKM","🏪"],["Konservasi Ekosistem Pesisir","🌊"],["Dasar Algoritma untuk Pemula","💻"],
+  ["Perubahan Sosial di Masyarakat","👥"],["Mengenal Sistem Tata Surya","🪐"],["Akad dalam Muamalah","☪️"],["Strategi Branding Produk Lokal","🎯"],["Siklus Hidup Tanaman","🌱"],
+  ["Pengelolaan Sampah Kampus","♻️"],["Komunikasi Efektif di Kelas","🎙️"],["Literasi Keuangan Mahasiswa","💳"],["Keselamatan Kerja di Laboratorium","🦺"],["Keanekaragaman Hayati Indonesia","🦋"],
+  ["Dampak Media Sosial","📱"],["Energi Terbarukan","☀️"],["Pencegahan Stunting","🥗"],["Kewirausahaan Berbasis Digital","🚀"],["Bahasa Indonesia Akademik","📖"]
+ ],
+ "LKPD":[
+  ["Praktikum Struktur Tanah","🌱"],["Siklus Air untuk SD","☁️"],["Jurnal Penyesuaian Akuntansi","🧾"],["Eksperimen Perubahan Wujud","🧪"],["Latihan Pecahan Sederhana","🔢"],
+  ["Observasi Lingkungan Sekolah","🏫"],["Mengenal Hewan dan Habitat","🐾"],["Teks Eksplanasi","📖"],["Rantai Makanan","🦁"],["Peta dan Letak Wilayah","🗺️"],
+  ["Menganalisis Iklan Digital","📱"],["Praktikum Gaya dan Gerak","⚙️"],["Identifikasi Jenis Tanaman","🍃"],["Simulasi Kegiatan Ekonomi","💰"],["Mengenal Bangun Ruang","📐"],
+  ["Diskusi Keragaman Budaya","🎎"],["Menulis Teks Deskripsi","✍️"],["Pengenalan Ekosistem Laut","🐠"],["Latihan Public Speaking","🎤"],["Proyek Ide Bisnis","💡"]
+ ],
+ "Media Pembelajaran":[
+  ["Proses Pengolahan Pangan","⚙️"],["Dasar Algoritma","💻"],["Mengenal Emosi","🧠"],["Sistem Tata Surya","🪐"],["Sensor dan Aktuator","🤖"],
+  ["Sistem Pernapasan Manusia","🫁"],["Siklus Hidrologi","💧"],["Struktur Sel","🔬"],["Hukum Newton","🚀"],["Pecahan dengan Media Visual","🍕"],
+  ["Kosakata Bahasa Inggris","🔤"],["Peta Interaktif Indonesia","🗺️"],["Rantai Nilai Pertanian","🌾"],["Konsep Permintaan dan Penawaran","📊"],["Simulasi Jaringan Komputer","🌐"],
+  ["Mengenal Alat Musik Nusantara","🎵"],["Literasi Digital Aman","🔐"],["Klasifikasi Makhluk Hidup","🦋"],["Ekosistem Mangrove","🌿"],["Tahapan Menyusun Proposal","📋"]
+ ],
+ "Kuis Interaktif":[
+  ["Logika dan Berpikir Komputasional","🧩"],["Kuis Sistem Tata Surya","🪐"],["Tebak Istilah Ekonomi","💰"],["Kuis Struktur Sel","🔬"],["Latihan Bahasa Inggris","🔤"],
+  ["Kuis PPKn: Toleransi","🤝"],["Tebak Alat Laboratorium","🧪"],["Kuis Akuntansi Dasar","🧾"],["Kuis Matematika Pecahan","➗"],["Kuis Dunia Tumbuhan","🌱"],
+  ["Kuis Keselamatan Kerja","🦺"],["Kuis Teknologi Informasi","💻"],["Kuis Sejarah Indonesia","📜"],["Kuis Komunikasi Efektif","🎙️"],["Kuis Psikologi Dasar","🧠"],
+  ["Kuis Agrobisnis","🌾"],["Kuis Ekosistem Laut","🌊"],["Kuis Hukum Bisnis","⚖️"],["Kuis Kewirausahaan","🚀"],["Kuis IPA Sekolah Dasar","🔍"]
+ ],
+ "Flashcard":[
+  ["Academic Vocabulary","🔤"],["Ekosistem Pesisir","🌊"],["Mengenal Warna","🎨"],["Istilah Akuntansi","🧾"],["Rumus Matematika","➗"],
+  ["Hewan dan Habitat","🐾"],["Bagian Tumbuhan","🌱"],["Kosakata Bahasa Indonesia","📖"],["Konsep Ekonomi","📈"],["Alat Laboratorium","🧪"],
+  ["Tokoh Sejarah Indonesia","📜"],["Istilah Teknik Mesin","🔧"],["Komponen Elektronika","⚡"],["Istilah Informatika","💻"],["Jenis-Jenis Tanah","🌍"],
+  ["Emosi dan Ekspresi","🧠"],["Simbol Keselamatan Kerja","🦺"],["Konsep Komunikasi","🎙️"],["Istilah Muamalah","☪️"],["Ide Bisnis Dasar","💡"]
+ ],
+ "Soal & Asesmen":[
+  ["Latihan Jurnal Penyesuaian","🧾"],["Rangkaian Listrik Dasar","⚡"],["Teks Eksplanasi","📖"],["Matematika Pecahan","➗"],["Sistem Pernapasan","🫁"],
+  ["Hukum dan Etika Digital","⚖️"],["Dasar-Dasar Manajemen","📋"],["Ekonomi Mikro","📈"],["Kimia Dasar","🧪"],["Fisika Gerak","🚀"],
+  ["Bahasa Inggris Akademik","🔤"],["Ilmu Sosial Dasar","👥"],["Agroteknologi Dasar","🌱"],["Teknik Industri","🏭"],["Sistem Informasi","🗂️"],
+  ["Psikologi Perkembangan","🧠"],["Ilmu Kelautan","🐟"],["Kewirausahaan","🚀"],["Pendidikan IPA SD","🔬"],["Sosiologi Masyarakat","🏘️"]
+ ],
+ "PPT":[
+  ["Strategi Pemasaran UMKM Madura","📈"],["Rantai Nilai Produk Pertanian","🌾"],["Lean Manufacturing Dasar","🏭"],["Analisis Kebutuhan Sistem","🗂️"],["Public Speaking dan Media","🎙️"],
+  ["Prinsip Keuangan Syariah","💰"],["Validasi Ide Bisnis Mahasiswa","🚀"],["Pengantar Ilmu Hukum","⚖️"],["Manajemen Keuangan Dasar","💳"],["Ekonomi Pembangunan Daerah","🏙️"],
+  ["Teknologi Pengolahan Pangan","⚙️"],["Ekosistem Laut Indonesia","🌊"],["Dasar Teknik Elektro","⚡"],["Psikologi Belajar","🧠"],["Sastra Inggris Modern","📖"],
+  ["Komunikasi Organisasi","📣"],["Sistem Informasi Pendidikan","💻"],["Kewirausahaan Sosial","🤝"],["Pembelajaran IPA Kontekstual","🔬"],["Budaya dan Masyarakat Madura","🎎"]
+ ]
+};
+const palette=[
+ "linear-gradient(135deg,#20131c,#b85d88)","linear-gradient(135deg,#111c28,#4c83a8)","linear-gradient(135deg,#211912,#b98245)","linear-gradient(135deg,#13201c,#4e9274)","linear-gradient(135deg,#161826,#5b68b8)",
+ "linear-gradient(135deg,#24161a,#a85b65)","linear-gradient(135deg,#16151f,#7967a8)","linear-gradient(135deg,#17201a,#76934f)","linear-gradient(135deg,#21151d,#bd6d93)","linear-gradient(135deg,#171d22,#5f8794)"
+];
+const programPool=programs.slice(0,20);
+const designs=[];
+Object.entries(designSets).forEach(([type,list])=>list.forEach((item,i)=>{
+ const prodi=programPool[i%programPool.length];
+ designs.push([prodi,type,item[0],item[1],palette[i%palette.length]]);
+}));
+// Total: 20 finished examples for every service category = 140 examples.
+
+
+function rupiah(n){return new Intl.NumberFormat("id-ID",{style:"currency",currency:"IDR",maximumFractionDigits:0}).format(n).replace("IDR","Rp").trim()}
+function toast(t){const e=document.getElementById("toast");e.textContent=t;e.classList.add("show");setTimeout(()=>e.classList.remove("show"),2600)}
+function esc(s){return s.replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+
+document.getElementById("serviceGrid").innerHTML=services.map(s=>`<div class="card"><div class="icon">${s.i}</div><h3>${s.n}</h3><p>${s.d}</p><div class="price">${rupiah(s.p)} <small>mulai</small></div></div>`).join("");
+document.getElementById("prodi").innerHTML += programs.map(p=>`<option>${p}</option>`).join("");
+document.getElementById("service").innerHTML += services.map(s=>`<option value="${s.n}">${s.n}</option>`).join("");
+document.getElementById("templateSelect").innerHTML += designs.map((d,i)=>`<option value="${i}">${d[0]} — ${d[2]}</option>`).join("");
+
+const typeMeta={
+ "Infografis":["📊","Infografis","Poster informasi yang padat, rapi, dan mudah dibaca","Infografis"],
+ "LKPD":["📚","LKPD","Lembar kerja dengan identitas, tujuan, aktivitas, dan ruang jawaban","LKPD"],
+ "Media Pembelajaran":["🎓","Media Pembelajaran","Materi visual/interaktif dengan alur belajar yang jelas","Media Pembelajaran"],
+ "Kuis Interaktif":["🧩","Kuis Interaktif","Tampilan kuis dengan soal, pilihan jawaban, skor, dan feedback","Kuis Interaktif"],
+ "Flashcard":["🃏","Flashcard","Kartu belajar depan-belakang untuk istilah dan konsep","Flashcard"],
+ "Soal & Asesmen":["📝","Soal & Asesmen","Lembar soal yang bersih dengan pilihan jawaban dan ruang identitas","Soal & Asesmen"],
+ "Bahan Presentasi / PPT":["🖥️","PPT / Presentasi","Slide presentasi dengan cover, isi, diagram, dan penutup","PPT"]
+};
+const templateTypes=document.getElementById("templateTypes");
+templateTypes.innerHTML=services.map(s=>{const m=typeMeta[s.n];const count=designs.filter(d=>d[1]===m[3]).length;return `<button class="type-card" data-type="${s.n}" aria-label="Lihat contoh ${m[1]}"><div class="type-icon">${m[0]}</div><div><h3>${m[1]}</h3><p>${m[2]}</p><span class="example-count">${count} contoh desain</span><br><span class="see-examples">👆 KLIK DI SINI • LIHAT CONTOH</span></div><b>›</b></button>`}).join("");
+function designMarkup(d){return `<article class="card design"><div class="design-cover" style="background:${d[4]}"><span class="cover-label">${d[1]}</span><div class="mock-sheet"><div class="mock-top"><span>${d[3]}</span><i>EVORIA</i></div><div class="mock-title">${d[2]}</div><div class="mock-lines"><em></em><em></em><em></em></div><div class="mock-blocks"><span></span><span></span><span></span></div><div class="mock-footer">${d[0]} • contoh desain</div></div></div><div class="design-info"><span class="tag">${d[0]}</span><h3>${d[2]}</h3><p>Contoh jadi untuk gambaran sebelum memesan.</p><button class="btn btn-dark choose-template" data-index="${designs.indexOf(d)}">Pilih template ini</button></div></article>`}
+const modal=document.getElementById("templateModal");
+function openTemplates(type){const meta=typeMeta[type];const key=meta?.[3]||type;document.getElementById("modalEyebrow").textContent="CONTOH DESAIN • KLIK TEMPLATE UNTUK MEMILIH";document.getElementById("modalTitle").textContent=`${meta?.[1]||type} — ${designs.filter(d=>d[1]===key).length} contoh`;document.getElementById("modalGallery").innerHTML=designs.filter(d=>d[1]===key).map(designMarkup).join("");modal.classList.add("show");modal.setAttribute("aria-hidden","false");document.body.classList.add("modal-open");}
+document.querySelectorAll(".type-card").forEach(b=>b.addEventListener("click",()=>openTemplates(b.dataset.type)));
+document.getElementById("modalClose").addEventListener("click",closeTemplates);modal.addEventListener("click",e=>{if(e.target===modal)closeTemplates()});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeTemplates()});
+function closeTemplates(){modal.classList.remove("show");modal.setAttribute("aria-hidden","true");document.body.classList.remove("modal-open");}
+document.addEventListener("click",e=>{const b=e.target.closest(".choose-template");if(!b)return;document.getElementById("templateSelect").value=b.dataset.index;closeTemplates();document.getElementById("pesan").scrollIntoView({behavior:"smooth"});toast("Template dipilih. Lengkapi detail pesananmu.");});
+
+const priceMap=Object.fromEntries(services.map(s=>[s.n,s.p]));
+function updateEstimate(){
+ const svc=document.getElementById("service").value; const qty=Math.max(1,parseInt(document.getElementById("qty").value||1));
+ const base=(priceMap[svc]||0)*qty; const disc=qty>3?Math.round(base*.10):0;
+ document.getElementById("base").textContent=rupiah(base);document.getElementById("qtyView").textContent=qty;
+ document.getElementById("disc").textContent=disc?("-"+rupiah(disc)):"Rp0";document.getElementById("total").textContent=rupiah(base-disc);
+}
+["service","qty"].forEach(id=>document.getElementById(id).addEventListener("input",updateEstimate));updateEstimate();
+
+function buildOrder(){
+ const name=document.getElementById("name").value.trim(),wa=document.getElementById("wa").value.trim(),prodi=document.getElementById("prodi").value,svc=document.getElementById("service").value,qty=Math.max(1,+document.getElementById("qty").value||1),ti=document.getElementById("templateSelect").value,brief=document.getElementById("brief").value.trim();
+ const d=ti!==""?designs[+ti]:null;const base=(priceMap[svc]||0)*qty,disc=qty>3?Math.round(base*.10):0,total=base-disc;
+ return `Halo EVORIA Express 👋%0A%0ASaya ingin memesan.%0A%0A👤 Nama: ${encodeURIComponent(name)}%0A📱 WA: ${encodeURIComponent(wa)}%0A🎓 Prodi: ${encodeURIComponent(prodi||"-")}%0A🧩 Layanan: ${encodeURIComponent(svc||"-")}%0A🔢 Jumlah: ${qty}%0A🎨 Template: ${encodeURIComponent(d?d[2]:"Belum dipilih")}%0A📝 Brief: ${encodeURIComponent(brief||"-")}%0A💰 Estimasi: ${encodeURIComponent(rupiah(total))}${disc?` (diskon 10%: ${encodeURIComponent(rupiah(disc))})`:""}%0A%0AMohon konfirmasi harga final dan pengerjaannya.`;
+}
+const attachmentInput=document.getElementById("attachment");
+const attachmentList=document.getElementById("attachmentList");
+const shareAttachments=document.getElementById("shareAttachments");
+function formatBytes(n){if(!n)return "0 B";const u=["B","KB","MB","GB"];const i=Math.min(Math.floor(Math.log(n)/Math.log(1024)),u.length-1);return (n/Math.pow(1024,i)).toFixed(i?1:0)+" "+u[i];}
+function refreshAttachments(){
+ const fs=[...attachmentInput.files];
+ attachmentList.innerHTML=fs.length?fs.map((f,i)=>`<div style="padding:5px 0">📎 ${i+1}. ${escapeHtml(f.name)} <span style="opacity:.7">(${formatBytes(f.size)})</span></div>`).join(""):"Belum ada file dipilih.";
+ shareAttachments.disabled=!fs.length || sessionStorage.getItem("evoriaOrdered")!=="1";
+}
+function escapeHtml(v){return v.replace(/[&<>\"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));}
+attachmentInput.addEventListener("change",refreshAttachments);
+shareAttachments.addEventListener("click",async()=>{
+ const fs=[...attachmentInput.files];
+ if(!fs.length)return toast("Pilih file pendukung dulu.");
+ if(sessionStorage.getItem("evoriaOrdered")!=="1")return toast("Kirim order terlebih dahulu.");
+ const shareData={title:"File pesanan EVORIA Express",text:"File pendukung pesanan EVORIA Express"};
+ try{
+   if(navigator.canShare && navigator.canShare({files:fs}) && navigator.share){await navigator.share({...shareData,files:fs});toast("File siap dibagikan. Pilih WhatsApp pada menu berbagi.");}
+   else {await navigator.clipboard.writeText("Saya sudah mengirim order EVORIA Express. File pendukung: "+fs.map(f=>f.name).join(", ")+". Mohon minta saya mengirim file melalui WhatsApp.");window.open("https://wa.me/6285855631853?text="+encodeURIComponent("Halo EVORIA Express, saya sudah mengirim order. Saya juga punya file pendukung: "+fs.map(f=>f.name).join(", ")+". Saya akan mengirim file melalui WhatsApp."),"_blank");toast("Browser ini belum mendukung berbagi file langsung. WhatsApp dibuka agar file bisa dikirim manual.");}
+ }catch(e){if(e.name!=="AbortError")toast("Berbagi file dibatalkan atau tidak didukung browser.");}
+});
+document.getElementById("orderForm").addEventListener("submit",e=>{e.preventDefault(); if(!document.getElementById("service").value)return toast("Pilih layanan terlebih dahulu."); if(!document.getElementById("name").value.trim()||!document.getElementById("wa").value.trim())return toast("Lengkapi nama dan nomor WhatsApp."); sessionStorage.setItem("evoriaOrdered","1"); unlockTools(true); refreshAttachments(); window.open("https://wa.me/6285855631853?text="+buildOrder(),"_blank"); toast("Order berhasil dibuat dan dikirim ke WhatsApp. Tools sekarang terbuka.");});
+document.getElementById("copyOrder").addEventListener("click",async()=>{const txt=decodeURIComponent(buildOrder().replaceAll("%0A","\n"));try{await navigator.clipboard.writeText(txt);toast("Ringkasan disalin.");}catch{toast("Clipboard diblokir browser.");}});
+function unlockTools(fromOrder=false){document.getElementById("toolsLocked").classList.add("unlocked");document.getElementById("unlockText").textContent="🔓 Tools aktif setelah order pada sesi ini.";document.getElementById("unlockBtn").textContent="Kamu sudah membuat order. Silakan gunakan tools di bawah.";if(fromOrder)toast("Tools berhasil dibuka setelah order.");}
+if(sessionStorage.getItem("evoriaOrdered")==="1")unlockTools();
+refreshAttachments();
+
+function fileToDataURL(file){
+ return new Promise((resolve,reject)=>{
+  const r=new FileReader();
+  r.onload=()=>resolve(r.result);
+  r.onerror=()=>reject(r.error||new Error("Gagal membaca file."));
+  r.readAsDataURL(file);
+ });
+}
+function loadImage(file){
+ return new Promise((resolve,reject)=>{
+  if(!file || !file.type || !file.type.startsWith("image/")) return reject(new Error("File bukan gambar."));
+  const url=URL.createObjectURL(file),img=new Image();
+  img.onload=()=>{URL.revokeObjectURL(url);resolve(img)};
+  img.onerror=()=>{URL.revokeObjectURL(url);reject(new Error("Gambar tidak dapat dibaca."))};
+  img.src=url;
+ });
+}
+function officeZipMime(ext){
+ const m={
+  docx:"application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  pptx:"application/vnd.openxmlformats-officedocument.presentationml.presentation",
+  xlsx:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  docm:"application/vnd.ms-word.document.macroEnabled.12",
+  pptm:"application/vnd.ms-powerpoint.presentation.macroEnabled.12",
+  xlsm:"application/vnd.ms-excel.sheet.macroEnabled.12"
+ };
+ return m[ext]||"application/octet-stream";
+}
+async function recompressOfficeFile(file){
+ if(!window.JSZip) throw new Error("Library kompresi belum termuat. Pastikan internet aktif.");
+ const zip=await JSZip.loadAsync(file);
+ const out=new JSZip();
+ const entries=Object.keys(zip.files);
+ for(const path of entries){
+  const entry=zip.files[path];
+  if(entry.dir) out.folder(path);
+  else out.file(path,await entry.async("uint8array"));
+ }
+ const ext=(file.name.split(".").pop()||"").toLowerCase();
+ const blob=await out.generateAsync({type:"blob",compression:"DEFLATE",compressionOptions:{level:9},mimeType:officeZipMime(ext)});
+ return blob;
+}
+function downloadBlob(blob,name){
+ const typeMap={
+  "pdf":"application/pdf",
+  "docx":"application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "png":"image/png","jpg":"image/jpeg","jpeg":"image/jpeg",
+  "webm":"video/webm","mp4":"video/mp4","zip":"application/zip"
+ };
+ const ext=(name.split(".").pop()||"").toLowerCase();
+ if(!(blob instanceof Blob)) blob=new Blob([blob],{type:typeMap[ext]||"application/octet-stream"});
+ if(!blob.type || blob.type==="application/octet-stream"){
+   const t=typeMap[ext]; if(t) blob=new Blob([blob],{type:t});
+ }
+ const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download=name;a.rel="noopener";document.body.appendChild(a);a.click();
+ setTimeout(()=>{URL.revokeObjectURL(url);a.remove()},1500);
+}
+function showResult(id,{title,meta,blob,name,previewUrl,previewType}={}){
+ const el=document.getElementById(id); if(!el)return;
+ const safeName=esc(name||"");
+ let preview="";
+ if(previewUrl && previewType==="image") preview=`<img class="result-preview" src="${previewUrl}" alt="Hasil">`;
+ if(previewUrl && previewType==="video") preview=`<video class="result-preview" controls src="${previewUrl}"></video>`;
+ el.innerHTML=`<div class="result-box"><div class="result-title">✅ ${esc(title||"Hasil siap")}</div><div class="result-meta">${esc(meta||name||"")}</div>${preview}<div class="result-actions"><button class="btn btn-pink" type="button" id="${id}Download">⬇️ Download ${safeName}</button></div></div>`;
+ document.getElementById(id+"Download").onclick=()=>downloadBlob(blob,name);
+}
+function showMultiImageResults(id,pages){
+ const el=document.getElementById(id);if(!el)return;
+ el.innerHTML=`<div class="result-box"><div class="result-title">✅ Hasil PDF berhasil diubah menjadi ${pages.length} PNG</div><div class="result-meta">Setiap halaman tersedia sebagai file PNG terpisah.</div><div class="result-pages">${pages.map((p,i)=>`<div class="result-page"><img src="${p.url}" alt="Halaman ${i+1}"><button class="btn btn-pink" type="button" data-page="${i}">⬇️ Download PNG ${i+1}</button></div>`).join("")}</div></div>`;
+ el.querySelectorAll("button[data-page]").forEach(btn=>btn.onclick=()=>{const p=pages[Number(btn.dataset.page)];downloadBlob(p.blob,p.name)});
+}
+function clearResult(id){const el=document.getElementById(id);if(el)el.innerHTML=""}
+function makeDocxBlob(zip){return zip.generateAsync({type:"blob",compression:"STORE",mimeType:"application/vnd.openxmlformats-officedocument.wordprocessingml.document"})}
+
+async function imgToPdf(){
+ const fs=[...document.getElementById("imgPdfInput").files];if(!fs.length)return toast("Pilih gambar dulu.");
+ const st=document.getElementById("imgPdfStatus");st.textContent="Membuat PDF…";clearResult("imgPdfStatusResult");
+ try{const {jsPDF}=window.jspdf;let pdf=null;
+  for(let i=0;i<fs.length;i++){const im=await loadImage(fs[i]);const ratio=im.width/im.height;let w=210,h=w/ratio;if(h>297){h=297;w=h*ratio}if(i===0)pdf=new jsPDF({orientation:w>h?"l":"p",unit:"mm",format:[w,h]});else pdf.addPage([w,h],w>h?"l":"p");pdf.addImage(await fileToDataURL(fs[i]),fs[i].type==="image/png"?"PNG":"JPEG",0,0,w,h)}
+  const blob=pdf.output("blob");const name="evoria-images.pdf";const url=URL.createObjectURL(blob);showResult("imgPdfStatusResult",{title:"PDF siap",meta:`${fs.length} gambar → ${name}`,blob,name,previewUrl:url,previewType:"image"});st.textContent="Selesai. Hasil tersedia di bawah.";
+ }catch(e){st.textContent="Gagal: "+e.message}
+}
+async function imgToDocx(){
+ const fs=[...document.getElementById("imgDocxInput").files];if(!fs.length)return toast("Pilih gambar dulu.");
+ const st=document.getElementById("imgDocxStatus");st.textContent="Membuat DOCX…";clearResult("imgDocxStatusResult");
+ try{if(!window.JSZip)return toast("Library Word belum termuat. Pastikan internet aktif.");const zip=new JSZip();
+  const ct=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Default Extension="png" ContentType="image/png"/><Default Extension="jpeg" ContentType="image/jpeg"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>`;
+  const rr=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>`;
+  let dr=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">`;
+  let body="<w:body>";
+  for(let i=0;i<fs.length;i++){const f=fs[i],ext=f.type==="image/png"?"png":"jpeg",rid=i+2;dr+=`<Relationship Id="rId${rid}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/image${i+1}.${ext}"/>`;zip.folder("word").folder("media").file(`image${i+1}.${ext}`,await f.arrayBuffer());body+=`<w:p><w:r><w:drawing><wp:inline xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"><wp:extent cx="5486400" cy="4114800"/><wp:docPr id="${i+1}" name="image${i+1}"/><a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:nvPicPr><pic:cNvPr id="${i+1}" name="image${i+1}.${ext}"/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="rId${rid}" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="5486400" cy="4114800"/></a:xfrm><a:prstGeom prst="rect"/></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r></w:p>`}
+  dr+="</Relationships>";body+=`<w:sectPr><w:pgSz w:w="12240" w:h="15840"/></w:sectPr></w:body>`;
+  const doc=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">${body}</w:document>`;
+  zip.file("[Content_Types].xml",ct);zip.folder("_rels").file(".rels",rr);zip.folder("word").file("document.xml",doc);zip.folder("word").folder("_rels").file("document.xml.rels",dr);
+  const blob=await makeDocxBlob(zip),name="evoria-images.docx";showResult("imgDocxStatusResult",{title:"Word siap",meta:`${fs.length} gambar → ${name}`,blob,name});st.textContent="Selesai. Hasil tersedia di bawah.";
+ }catch(e){st.textContent="Gagal: "+e.message}
+}
+async function getPdfJs(){if(window.pdfjsLib)return window.pdfjsLib;throw new Error("PDF.js gagal dimuat. Pastikan koneksi internet aktif lalu buka ulang halaman.")}
+async function pdfToPng(){
+ const f=document.getElementById("pdfPngInput").files[0];if(!f)return toast("Pilih PDF dulu.");const st=document.getElementById("pdfPngStatus");st.textContent="Memuat PDF…";clearResult("pdfPngStatusResult");
+ try{const lib=await getPdfJs();const pdf=await lib.getDocument({data:await f.arrayBuffer(),disableWorker:true}).promise;const pages=[];
+  for(let n=1;n<=pdf.numPages;n++){const page=await pdf.getPage(n),vp=page.getViewport({scale:1.7}),c=document.createElement("canvas");c.width=vp.width;c.height=vp.height;await page.render({canvasContext:c.getContext("2d"),viewport:vp}).promise;const blob=await new Promise(r=>c.toBlob(r,"image/png"));pages.push({blob,url:URL.createObjectURL(blob),name:`evoria-page-${n}.png`})}
+  showMultiImageResults("pdfPngStatusResult",pages);st.textContent=`Selesai: ${pdf.numPages} halaman. Hasil tersedia di bawah.`;
+ }catch(e){st.textContent="Gagal membaca PDF: "+e.message}
+}
+async function pdfToDocx(){
+ const f=document.getElementById("pdfDocxInput").files[0];if(!f)return toast("Pilih PDF dulu.");const st=document.getElementById("pdfDocxStatus");st.textContent="Mengekstrak teks…";clearResult("pdfDocxStatusResult");
+ try{const lib=await getPdfJs();const pdf=await lib.getDocument({data:await f.arrayBuffer(),disableWorker:true}).promise;let text="";for(let n=1;n<=pdf.numPages;n++){const p=await pdf.getPage(n),c=await p.getTextContent();text+=c.items.map(x=>x.str).join(" ")+"\n\n"}
+  const zip=new JSZip(),escx=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");const paras=text.split(/\n+/).filter(x=>x.trim()).map(x=>`<w:p><w:r><w:t xml:space="preserve">${escx(x)}</w:t></w:r></w:p>`).join("");
+  const ct=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>`;
+  const rr=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>`;
+  const doc=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>${paras}<w:sectPr/></w:body></w:document>`;
+  zip.file("[Content_Types].xml",ct);zip.folder("_rels").file(".rels",rr);zip.folder("word").file("document.xml",doc);zip.folder("word").folder("_rels").file("document.xml.rels",`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"/>`);
+  const blob=await makeDocxBlob(zip),name="evoria-pdf-to-word.docx";showResult("pdfDocxStatusResult",{title:"Word siap",meta:`PDF → ${name}`,blob,name});st.textContent="Selesai. Hasil tersedia di bawah.";
+ }catch(e){st.textContent="Gagal: "+e.message}
+}
+async function wordToHtml(file){if(!window.mammoth)throw new Error("Mammoth belum termuat.");const ab=await file.arrayBuffer();return (await mammoth.convertToHtml({arrayBuffer:ab})).value}
+async function wordToPdf(){
+ const f=document.getElementById("wordPdfInput").files[0];if(!f)return toast("Pilih DOCX dulu.");const st=document.getElementById("wordPdfStatus");st.textContent="Merender…";clearResult("wordPdfStatusResult");
+ try{const html=await wordToHtml(f);const box=document.createElement("div");box.style.cssText="position:fixed;left:-99999px;top:0;width:794px;background:white;color:#111;padding:55px;font:16px Arial;line-height:1.6";box.innerHTML=html;document.body.appendChild(box);const canvas=await html2canvas(box,{scale:2,backgroundColor:"#fff",useCORS:true});const {jsPDF}=window.jspdf;const pageW=210,pageH=297,ratio=canvas.width/canvas.height;let imgH=pageW/ratio;const pdf=new jsPDF({unit:"mm",format:"a4"});if(imgH<=pageH){pdf.addImage(canvas.toDataURL("image/png"),"PNG",0,0,pageW,imgH)}else{const pagePx=Math.floor(canvas.width*pageH/pageW);let y=0;let first=true;while(y<canvas.height){const slice=document.createElement("canvas");slice.width=canvas.width;slice.height=Math.min(pagePx,canvas.height-y);slice.getContext("2d").drawImage(canvas,0,y,canvas.width,slice.height,0,0,slice.width,slice.height);if(!first)pdf.addPage();pdf.addImage(slice.toDataURL("image/png"),"PNG",0,0,pageW,pageH);first=false;y+=slice.height}}
+  const blob=pdf.output("blob"),name="evoria-word.pdf";box.remove();const url=URL.createObjectURL(blob);showResult("wordPdfStatusResult",{title:"PDF siap",meta:`DOCX → ${name}`,blob,name,previewUrl:url,previewType:"image"});st.textContent="Selesai. Hasil tersedia di bawah.";
+ }catch(e){st.textContent="Gagal: "+e.message}
+}
+async function wordToPng(){
+ const f=document.getElementById("wordPngInput").files[0];if(!f)return toast("Pilih DOCX dulu.");const st=document.getElementById("wordPngStatus");st.textContent="Merender…";clearResult("wordPngStatusResult");
+ try{const html=await wordToHtml(f);const box=document.createElement("div");box.style.cssText="position:fixed;left:-99999px;top:0;width:794px;background:white;color:#111;padding:55px;font:16px Arial;line-height:1.6";box.innerHTML=html;document.body.appendChild(box);const canvas=await html2canvas(box,{scale:2,backgroundColor:"#fff",useCORS:true});const blob=await new Promise(r=>canvas.toBlob(r,"image/png"));const name="evoria-word.png";const url=URL.createObjectURL(blob);showResult("wordPngStatusResult",{title:"PNG siap",meta:`DOCX → ${name}`,blob,name,previewUrl:url,previewType:"image"});box.remove();st.textContent="Selesai. Hasil tersedia di bawah."}catch(e){st.textContent="Gagal: "+e.message}
+}
+async function compressPhoto(){
+ const f=document.getElementById("compressPhotoInput").files[0];if(!f)return toast("Pilih foto dulu.");const st=document.getElementById("compressPhotoStatus");st.textContent="Memproses…";clearResult("compressPhotoStatusResult");
+ try{const im=await loadImage(f),max=1800,scale=Math.min(1,max/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=Math.round(im.width*scale);c.height=Math.round(im.height*scale);c.getContext("2d").drawImage(im,0,0,c.width,c.height);const blob=await new Promise(r=>c.toBlob(r,"image/jpeg",.72));const name="evoria-compressed.jpg",url=URL.createObjectURL(blob);showResult("compressPhotoStatusResult",{title:"Foto terkompresi",meta:`${Math.round(f.size/1024)} KB → ${Math.round(blob.size/1024)} KB`,blob,name,previewUrl:url,previewType:"image"});st.textContent="Selesai. Hasil tersedia di bawah."}catch(e){st.textContent="Gagal: "+e.message}
+}
+async function compressFile(){
+ const f=document.getElementById("compressFileInput").files[0];if(!f)return toast("Pilih file dulu.");const st=document.getElementById("compressStatus");st.textContent="Memproses…";clearResult("compressStatusResult");
+ try{if(f.type.startsWith("image/")){const im=await loadImage(f),c=document.createElement("canvas"),s=Math.min(1,1600/Math.max(im.width,im.height));c.width=im.width*s;c.height=im.height*s;c.getContext("2d").drawImage(im,0,0,c.width,c.height);const blob=await new Promise(r=>c.toBlob(r,"image/jpeg",.7));const name="evoria-compressed.jpg",url=URL.createObjectURL(blob);showResult("compressStatusResult",{title:"File terkompresi",meta:`${Math.round(f.size/1024)} KB → ${Math.round(blob.size/1024)} KB`,blob,name,previewUrl:url,previewType:"image"});st.textContent="Selesai. Hasil tersedia di bawah.";return}
+  if(f.type==="application/pdf"){const lib=await getPdfJs();const pdf=await lib.getDocument({data:await f.arrayBuffer(),disableWorker:true}).promise;const {jsPDF}=window.jspdf;const out=new jsPDF({unit:"mm",format:"a4"});let first=true;for(let n=1;n<=pdf.numPages;n++){const page=await pdf.getPage(n),vp=page.getViewport({scale:1.25}),c=document.createElement("canvas");c.width=vp.width;c.height=vp.height;await page.render({canvasContext:c.getContext("2d"),viewport:vp}).promise;if(!first)out.addPage();out.addImage(c.toDataURL("image/jpeg",.65),"JPEG",0,0,210,297);first=false}const blob=out.output("blob"),name="evoria-compressed.pdf";showResult("compressStatusResult",{title:"PDF terkompresi",meta:`${Math.round(f.size/1024)} KB → ${Math.round(blob.size/1024)} KB`,blob,name});st.textContent="Selesai. Hasil tersedia di bawah.";return}
+  const ext=(f.name.split(".").pop()||"").toLowerCase();
+  const officeExts=["docx","pptx","xlsx","docm","pptm","xlsm"];
+  if(officeExts.includes(ext)){
+   const blob=await recompressOfficeFile(f);
+   const name=`evoria-compressed.${ext}`;
+   showResult("compressStatusResult",{title:"File terkompresi",meta:`${f.name} → ${name} • tetap bisa dibuka sebagai ${ext.toUpperCase()}`,blob,name});
+   st.textContent="Selesai. Hasil tersedia di bawah.";return;
+  }
+  if(typeof CompressionStream!=="undefined"){
+   const stream=new Blob([await f.arrayBuffer()]).stream().pipeThrough(new CompressionStream("gzip"));
+   const blob=await new Response(stream).blob();
+   const name=`${f.name}.gz`;
+   showResult("compressStatusResult",{title:"File terkompresi",meta:`Format file ini tidak dapat diperkecil sambil mempertahankan ekstensi aslinya. Hasil gzip tersedia sebagai ${name}.`,blob,name});
+   st.textContent="Selesai. Hasil tersedia di bawah.";return;
+  }
+  throw new Error("Format file ini tidak dapat dikompres langsung di browser.");
+ }catch(e){st.textContent="Gagal: "+e.message}
+}
+async function compressVideo(){
+ const f=document.getElementById("compressVideoInput").files[0];if(!f)return toast("Pilih video dulu.");const st=document.getElementById("compressVideoStatus");st.textContent="Memproses… jangan tutup halaman.";clearResult("compressVideoStatusResult");
+ try{const v=document.createElement("video");v.muted=true;v.playsInline=true;v.src=URL.createObjectURL(f);await new Promise((res,rej)=>{v.onloadedmetadata=res;v.onerror=rej});await v.play().catch(()=>{});const c=document.createElement("canvas"),scale=Math.min(1,720/Math.max(v.videoWidth||1280,v.videoHeight||720));c.width=Math.round((v.videoWidth||1280)*scale);c.height=Math.round((v.videoHeight||720)*scale);const ctx=c.getContext("2d"),stream=c.captureStream(25);let mime="video/webm;codecs=vp9";if(!MediaRecorder.isTypeSupported(mime))mime="video/webm";const rec=new MediaRecorder(stream,{mimeType:mime,videoBitsPerSecond:900000}),chunks=[];rec.ondataavailable=e=>e.data.size&&chunks.push(e.data);const done=new Promise(res=>rec.onstop=res);rec.start(200);const draw=()=>{if(rec.state!=="recording")return;ctx.drawImage(v,0,0,c.width,c.height);if(v.ended){rec.stop();return}requestAnimationFrame(draw)};draw();await done;URL.revokeObjectURL(v.src);const blob=new Blob(chunks,{type:mime}),name="evoria-compressed.webm",url=URL.createObjectURL(blob);showResult("compressVideoStatusResult",{title:"Video terkompresi",meta:`${Math.round(f.size/1024/1024*10)/10} MB → ${Math.round(blob.size/1024/1024*10)/10} MB`,blob,name,previewUrl:url,previewType:"video"});st.textContent="Selesai. Hasil tersedia di bawah."}catch(e){st.textContent="Browser tidak mendukung kompresi video ini: "+e.message}
+}
+
+</script>
+</body></html>
